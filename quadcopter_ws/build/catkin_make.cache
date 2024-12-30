@@ -1,0 +1,2 @@
+quadcopter_v1_0_urdf
+-DCATKIN_DEVEL_PREFIX=/home/vboxuser/quadcopter_ws/devel -DCMAKE_INSTALL_PREFIX=/home/vboxuser/quadcopter_ws/install -G Unix Makefiles

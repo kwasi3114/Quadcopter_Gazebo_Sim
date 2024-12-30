@@ -1,0 +1,16 @@
+joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+joint_motor_controller:
+    type: velocity_controllers/JointGroupVelocityController
+    joints: 
+        - prop_1_joint
+        - prop_2_joint
+        - prop_3_joint
+        - prop_4_joint
+    gains:
+        prop_1_joint: {p: 10000, i: 1, d: 1000}
+        prop_2_joint: {p: 10000, i: 1, d: 1000}
+        prop_3_joint: {p: 10000, i: 1, d: 1000}
+        prop_4_joint: {p: 10000, i: 1, d: 1000}

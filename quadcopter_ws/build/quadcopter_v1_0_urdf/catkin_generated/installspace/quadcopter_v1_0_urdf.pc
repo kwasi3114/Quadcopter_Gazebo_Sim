@@ -1,0 +1,8 @@
+prefix=/home/vboxuser/quadcopter_ws/install
+
+Name: quadcopter_v1_0_urdf
+Description: Description of quadcopter_v1_0_urdf
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

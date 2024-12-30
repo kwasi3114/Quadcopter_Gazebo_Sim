@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="quadcopter_v1_0_urdf">
+  <link name="dummy">
+  </link>
+  <joint name="dummy_joint" type="fixed">
+    <parent link="dummy"/>
+    <child link="base_link"/>
+  </joint>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0908579511245632 -0.183089894727343 0.328868204622195"
+        rpy="0 0 0" />
+      <mass
+        value="0.0642" />
+      <inertia
+        ixx="7.88759298386174E-05"
+        ixy="-2.59873780156465E-06"
+        ixz="7.28111147136525E-07"
+        iyy="0.000147664365037692"
+        iyz="-1.93005267495999E-05"
+        izz="8.41854903635427E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadcopter_v1_0_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadcopter_v1_0_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="arm_1">
+    <inertial>
+      <origin
+        xyz="0.0241643636180894 0.00583843702481002 -0.0350154607412529"
+        rpy="0 0 0" />
+      <mass
+        value="0.0308142804545101" />
+      <inertia
+        ixx="1.15551361111578E-06"
+        ixy="-3.83944153122613E-20"
+        ixz="5.70580995219612E-10"
+        iyy="0.000129332253895926"
+        iyz="6.7762635780344E-21"
+        izz="0.000128900963335191" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadcopter_v1_0_urdf/meshes/arm_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadcopter_v1_0_urdf/meshes/arm_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_1_joint"
+    type="fixed">
+    <origin
+      xyz="-0.270071494826336 -0.348879463866116 -0.183583562305019"
+      rpy="1.84239431223773 -0.0468894372043293 -2.84099956290566" />
+    <parent
+      link="base_link" />
+    <child
+      link="arm_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="prop_1">
+    <inertial>
+      <origin
+        xyz="8.57165187915232E-05 0.0138647799159885 0.00292675490410388"
+        rpy="0 0 0" />
+      <mass
+        value="0.00407364353872868" />
+      <inertia
+        ixx="7.13491545834003E-08"
+        ixy="5.46613022005476E-14"
+        ixz="2.23553151213388E-07"
+        iyy="7.76742940464573E-06"
+        iyz="-1.22776049275972E-15"
+        izz="7.69675923103702E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadcopter_v1_0_urdf/meshes/prop_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadcopter_v1_0_urdf/meshes/prop_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prop_1_joint"
+    type="continuous">
+    <origin
+      xyz="0.131825607100094 0.00990973980420728 -0.0350636025394211"
+      rpy="3.14159265358979 0.166927212605199 3.14159265358979" />
+    <parent
+      link="arm_1" />
+    <child
+      link="prop_1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="arm_2">
+    <inertial>
+      <origin
+        xyz="0.0325812720452767 -0.002876679002353 0.10261289576674"
+        rpy="0 0 0" />
+      <mass
+        value="0.0308142804545101" />
+      <inertia
+        ixx="0.00011723419184482"
+        ixy="-6.35274710440725E-22"
+        ixz="-3.68003181261055E-05"
+        iyy="0.000129332253895926"
+        iyz="-1.75759336555267E-20"
+        izz="1.28222851014875E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadcopter_v1_0_urdf/meshes/arm_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadcopter_v1_0_urdf/meshes/arm_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_2_joint"
+    type="fixed">
+    <origin
+      xyz="-0.182959418638706 -0.0434395139297345 -0.256828107057952"
+      rpy="1.29762186290921 -0.0363101041830462 0.00499110811962786" />
+    <parent
+      link="base_link" />
+    <child
+      link="arm_2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="prop_2">
+    <inertial>
+      <origin
+        xyz="8.57165187900522E-05 0.0140272395195912 0.00292675490410353"
+        rpy="0 0 0" />
+      <mass
+        value="0.00407364353872871" />
+      <inertia
+        ixx="7.1349154583402E-08"
+        ixy="5.46612840356614E-14"
+        ixz="2.23553151213408E-07"
+        iyy="7.76742940464581E-06"
+        iyz="-1.22776070451795E-15"
+        izz="7.6967592310371E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadcopter_v1_0_urdf/meshes/prop_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadcopter_v1_0_urdf/meshes/prop_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prop_2_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0.140074001564635 0" />
+    <parent
+      link="arm_2" />
+    <child
+      link="prop_2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="arm_3">
+    <inertial>
+      <origin
+        xyz="0.0241643636180893 0.00591563883907265 -0.0350154607412529"
+        rpy="0 0 0" />
+      <mass
+        value="0.0308142804545101" />
+      <inertia
+        ixx="1.1555136111158E-06"
+        ixy="5.39718806078599E-20"
+        ixz="5.70580995209606E-10"
+        iyy="0.000129332253895926"
+        iyz="0"
+        izz="0.000128900963335192" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadcopter_v1_0_urdf/meshes/arm_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadcopter_v1_0_urdf/meshes/arm_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_3_joint"
+    type="fixed">
+    <origin
+      xyz="0.0883094515572144 -0.308514261329835 -0.181373136424891"
+      rpy="1.29919834135206 0.0468894372043292 0.30059309068413" />
+    <parent
+      link="base_link" />
+    <child
+      link="arm_3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="prop_3">
+    <inertial>
+      <origin
+        xyz="8.57165187891917E-05 0.0138647799159876 0.00292675490410416"
+        rpy="0 0 0" />
+      <mass
+        value="0.00407364353872878" />
+      <inertia
+        ixx="7.1349154583403E-08"
+        ixy="5.46612899483484E-14"
+        ixz="2.23553151213431E-07"
+        iyy="7.76742940464606E-06"
+        iyz="-1.22776028100148E-15"
+        izz="7.69675923103735E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadcopter_v1_0_urdf/meshes/prop3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadcopter_v1_0_urdf/meshes/prop3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prop_3_joint"
+    type="continuous">
+    <origin
+      xyz="0.131825607100094 0.00939341612020517 -0.0350636025394209"
+      rpy="0 -0.166927212605201 0" />
+    <parent
+      link="arm_3" />
+    <child
+      link="prop_3" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="arm_4">
+    <inertial>
+      <origin
+        xyz="0.0241643636180889 0.005847900774412 -0.0350154607412529"
+        rpy="0 0 0" />
+      <mass
+        value="0.0308142804545102" />
+      <inertia
+        ixx="1.15551361111578E-06"
+        ixy="-2.04717275439524E-19"
+        ixz="5.70580995367366E-10"
+        iyy="0.000129332253895927"
+        iyz="-2.03287907341032E-20"
+        izz="0.000128900963335192" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadcopter_v1_0_urdf/meshes/arm_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadcopter_v1_0_urdf/meshes/arm_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_4_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0717575933124926 -0.501169219567261 -0.133433827316574"
+      rpy="1.52212544568917 -0.271291919602174 -1.25715102486467" />
+    <parent
+      link="base_link" />
+    <child
+      link="arm_4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="prop_4">
+    <inertial>
+      <origin
+        xyz="8.58015515640825E-05 0.0138647799159881 -0.00292675241249418"
+        rpy="0 0 0" />
+      <mass
+        value="0.00407364353872863" />
+      <inertia
+        ixx="7.13581325632632E-08"
+        ixy="-5.46393852329636E-14"
+        ixz="-2.23706218319812E-07"
+        iyy="7.76742940464543E-06"
+        iyz="-1.97494180805989E-15"
+        izz="7.69675025305686E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadcopter_v1_0_urdf/meshes/prop_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadcopter_v1_0_urdf/meshes/prop_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="prop_4_joint"
+    type="continuous">
+    <origin
+      xyz="0.131825607100094 0.00912937612862014 -0.0350636025394206"
+      rpy="-3.14159265358976 -1.46245587192948 3.14159265358976" />
+    <parent
+      link="arm_4" />
+    <child
+      link="prop_4" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  
+  <transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="prop_1_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor1">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="prop_2_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor2">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="tran3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="prop_3_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor3">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="tran4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="prop_4_joint">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor4">
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace></robotNamespace>
+    </plugin>
+  </gazebo>
+  
+</robot>
